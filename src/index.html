@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Creama</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row center-xs">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="box box--fixed">
+          <div class="box__wrap">
+            <h2 class="main-h2">Daily stats</h2>
+            <div id="donutchart"></div>
+          </div>
+        </div>
+        <div class="box box--fixed">
+          <div class="product">
+            <span class="product__price">$ 99</span>
+            <img src="img/headph.jpg" alt="">
+            <ul class="product__menu">
+              <li>
+                <a class="product__menu-item product__menu-item--shop" href="#"></a>
+              </li>
+              <li>
+                <a class="product__menu-item product__menu-item--star" href="#"></a>
+              </li>
+              <li>
+                <a class="product__menu-item product__menu-item--menu" href="#"></a>
+              </li>
+            </ul>
+            <div class="box__wrap">
+              <h2 class="main-h2">Headphones</h2>
+              <p class="product__about">Acoustic Bass Booster technology; 30mm drivers; neodymium magnets; swivel design; tangle-free Y-type cordfermentum massa justo sit amet risus.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+        <div class="box">
+          <div class="plyr">
+            <div data-video-id="e-ORhEE9VVg" data-type="youtube"></div>
+          </div>
+        </div>
+        <div class="row around-xs">
+          <a href="" class="box box--circle"><i class="icon-facebook"></i></a>
+          <a href="" class="box box--circle"><i class="icon-twitter"></i></a>
+          <a href="" class="box box--circle"><i class="icon-gplus"></i></a>
+          <a href="" class="box box--circle"><i class="icon-instagram"></i></a>
+          <form action="" class="search">
+            <input class="search__line box" type="text" placeholder="Search">
+            <button class="search__icon" type="submit" value=""><i class="icon-search"></i></button>
+          </form>
+        </div>
+        <div class="login box">
+          <div class="login__top-line">
+            <h2 class="main-h2">Sign up</h2>
+          </div>
+          <div class="row around-xs">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 separate--vertical">
+              <div class="login__wrap">
+                <form action="" class="login__form">
+                  <input type="text" placeholder="Your name">
+                  <input type="text" placeholder="Email">
+                  <input type="password" placeholder="Password"><a href="" class="pre">Forgot pass?</a>
+                  <button>Create one for me</button>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs 12">
+              <div class="login__wrap">
+                <h2 class="main-h2"><span style="color: #4db2ac">or</span> connect with</h2>
+                <a href="" class="box--circle box--circle-trans-bg"><i class="icon-facebook"></i></a>
+                <a href="" class="box--circle box--circle-trans-bg"><i class="icon-twitter"></i></a>
+                <a href="" class="box--circle box--circle-trans-bg"><i class="icon-gplus"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function(d, p) {
+        var a = new XMLHttpRequest(),
+          b = d.body;
+        a.open('GET', p, true);
+        a.send();
+        a.onload = function() {
+          var c = d.createElement('div');
+          c.setAttribute('hidden', '');
+          c.innerHTML = a.responseText;
+          b.insertBefore(c, b.childNodes[0]);
+        };
+      })(document, 'img/plyr-sprite.svg');
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      plyr.setup();
+    </script>
+</body>
+
+</html>
