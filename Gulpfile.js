@@ -70,7 +70,9 @@ gulp.task('style:build', function () {
     gulp.src(path.src.style) //Выберем наш main.scss
         .pipe(sourcemaps.init()) //То же самое что и с js
         .pipe(sass({includePaths: ['./src/sass']})) //Скомпилируем
-        .pipe(prefixer()) //Добавим вендорные префиксы
+        .pipe(prefixer({
+          browsers: ['last 2 versions', 'ios 6', 'ie 10'],
+        })) //Добавим вендорные префиксы
         .pipe(cssmin()) //Сожмем
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css)) //И в build
